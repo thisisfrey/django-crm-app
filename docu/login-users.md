@@ -52,9 +52,16 @@ In the following the login form is added to the home-page instead of a separate 
 slightliy different.
 You can find the login form in [home.html](../dcrm/website/templates/home.html)
 
-### Change templates
+### Changes
 
-## Timezone Error
+Changes in the following files:
+
+- urls.py
+- views.py
+- base.html
+- home.html
+
+## Fix for Timezone Error
 
 ZoneInfoNotFoundError: 'No time zone found with key utc'
 
