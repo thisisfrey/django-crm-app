@@ -5,8 +5,6 @@ from django.shortcuts import render, redirect
 
 def home(request):
     # Check to see if logging in
-    messages.warning(request, "TEST")
-
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']

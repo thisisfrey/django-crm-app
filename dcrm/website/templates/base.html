@@ -12,10 +12,10 @@
 <div class="container">
     <br/>
     {% if messages %}
-    {% for m in messages %}
-    {{ m }}
+    {% for message in messages %}
+    {{ message }}
     {% endfor %}
-    {% end if %}
+    {% endif %}
 
     {% block content %}
     {% endblock %}
