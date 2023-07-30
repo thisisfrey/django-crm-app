@@ -1,11 +1,12 @@
 # Build Out The Basic App
 
+## Home Page
 Creating a new webpage in Django is a 3-step-process:
 - Create an URL
 - Create actual template file 
 - Create a view
 
-##  URL configuration for dcrm project
+###  URL configuration for dcrm project
 Change the existing [URL configuration](../dcrm/dcrm/urls.py):
 - Import include from django.urls
 - Include the url [website.urls](../dcrm/website/urls.py)
@@ -20,7 +21,7 @@ urlpatterns = [
 ]
 ```
 
-## Create home URL
+### Create home URL
 - Open the project directory [website](../dcrm/website)
 - Create a new file with the name [urls.py](../dcrm/website/urls.py)
 - Add home view to the root url
@@ -34,7 +35,7 @@ urlpatterns = [
 ]
 ```
 
-## Create home view
+### Create home view
 - Open the existing file [views.py](../dcrm/website/views.py)
 - Add the following lines
 ```python
@@ -42,12 +43,39 @@ def home(request):
     return render(request, 'home.html', {})
 ```
 
-## Create home template
+### Create home template
 - Create a new directory named [templates](../dcrm/website/templates)
 - Create the template file [home.html](../dcrm/website/templates/home.html)
 - Add the following content:
 ```html
 <h1>Hello world!</h1>
 ```
+
+<!--- Hello world is working now! -->
+
+## Add base.html
+- Create [base.html](../dcrm/website/templates/base.html) file with bootstrap and entry points for the Django app.
+- Copy content from [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and include Bootstrap’s CSS and JS.
+
+**base.html:**
+```hml
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Django CRM App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>
+
+    {% block content %}
+    {% endblock %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
+```
+
 
 
