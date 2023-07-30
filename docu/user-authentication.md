@@ -1,4 +1,4 @@
-# Login Users
+# User Authentication
 
 ## Django authentication
 
@@ -11,7 +11,20 @@ from django.contrib import messages
 
 ### Login as superuser
 
-Login [here](http://127.0.0.1:8000/admin)
+Authenticate here with superuser: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+
+**Superuser credentials:**
+
+- Username: admin
+- Password: password
+
+###### Fix for Timezone Error
+
+ZoneInfoNotFoundError: 'No time zone found with key utc'
+
+```console
+pip install tzdata
+```
 
 ## Add login and logout
 
@@ -39,11 +52,8 @@ def logout_user(request):
 Add login- and logout-route to [urls.py](../dcrm/website/urls.py).
 
 ```python
-urlpatterns = [
-    path('', views.home, name='home'),
-    path('login', views.login_user(), name='login'),
-    path('logout', views.logout_user(), name='logout'),
-]
+path('login', views.login_user, name='login'),
+path('logout', views.logout_user, name='logout'),
 ```
 
 ### Login Form
@@ -60,11 +70,3 @@ Changes in the following files:
 - views.py
 - base.html
 - home.html
-
-## Fix for Timezone Error
-
-ZoneInfoNotFoundError: 'No time zone found with key utc'
-
-```console
-pip install tzdata
-```

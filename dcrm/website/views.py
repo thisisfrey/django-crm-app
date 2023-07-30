@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
 
@@ -22,7 +22,9 @@ def home(request):
 
 
 def logout_user(request):
-    pass
+    logout(request)
+    messages.success(request, "You have been logged out!")
+    return redirect('home')
 
 
 """
