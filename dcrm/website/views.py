@@ -16,6 +16,7 @@ def home(request):
             return redirect('home')
         else:
             messages.warning(request, "An error occured, please try again!")
+            return redirect('home')
     else:
         return render(request, 'home.html', {})
 
