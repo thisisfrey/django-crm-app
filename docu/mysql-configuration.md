@@ -1,4 +1,4 @@
-# MYSQL Configuration
+# MySQL Configuration
 
 ## Settings
 Open the project in PyCharm Community or any other IDE.
