@@ -57,7 +57,7 @@ def home(request):
 - Create [base.html](../dcrm/website/templates/base.html) file with bootstrap and entry points for the Django app.
 - Copy content from [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and include Bootstrap’s CSS and JS.
 
-**base.html:**
+**base.html**
 ```hml
 <!doctype html>
 <html lang="en">
@@ -76,6 +76,35 @@ def home(request):
   </body>
 </html>
 ```
+
+Make the following changes in the home.html-file.
+
+**home.html**
+```hml
+{% extends 'base.html' %}
+
+ {% block content %}
+ <h1>Hello world!</h1>
+ {% endblock %}
+```
+
+## Add bootstrap components
+
+### Navbar
+- Copy navbar from [Bootstrap](https://getbootstrap.com/docs/5.3/components/navbar/#how-it-works)
+- Include the navbar in the base.html body-tag:
+```hml
+ <body>
+      {% include 'navbar.html'%}
+      <!-- More code goes here-->
+ </body>  
+```
+
+### Preview
+The Django CRM app running on [127.0.0.1:8000](http://127.0.0.1:8000/) now looks like this:
+<img src="./images/hello-world-with-navbar.jpg">
+
+
 
 
 
