@@ -6,7 +6,7 @@
 1. [Installation and App Setup](./docu/installation-and-app-setup.md)
 2. [MySQL Configuration](./docu/mysql-configuration.md)
 3. [Build Out The Basic App](./docu/build-out-the-basic-app.md)
-4. [Login Users]()
+4. [Login Users](./docu/login-users.md)
 5. [Logout Users]()
 6. [Register Users]()
 7. [Database Model]()
