@@ -1,24 +1,15 @@
 # User Authentication
 
-## Django authentication
+### Authenticate as superuser
 
-Import the django authentication and messages into the [views](../dcrm/website/views.py)
+Login with the previously created superuser on [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin).
 
-```python
-from django.contrib.auth import authenticate, login, logout
-from django.contrib import messages
-```
-
-### Login as superuser
-
-Authenticate here with superuser: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
-
-**Superuser credentials:**
+#### Superuser credentials:
 
 - Username: admin
 - Password: password
 
-###### Fix for Timezone Error
+#### Fix for Timezone Error
 
 ZoneInfoNotFoundError: 'No time zone found with key utc'
 
@@ -26,7 +17,7 @@ ZoneInfoNotFoundError: 'No time zone found with key utc'
 pip install tzdata
 ```
 
-## Add login and logout
+## Django authentication
 
 3-steps-process:
 
@@ -36,15 +27,22 @@ pip install tzdata
 
 ### Add new views
 
-Add login_user- and logout_user-view in [views.py](../dcrm/website/views.py).
+Import authenticate, login, and logout from django authentication and add the login_user- and logout_user-view
+in [views.py](../dcrm/website/views.py).
 
 ```python
+from django.contrib.auth import authenticate, login, logout
+
+
 def login_user(request):
-    pass
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    login(request, user)
 
 
 def logout_user(request):
-    pass
+    logout(request)
 ```
 
 ### Add URLs
@@ -58,15 +56,42 @@ path('logout', views.logout_user, name='logout'),
 
 ### Login Form
 
-In the following the login form is added to the home-page instead of a separate form-template. Therefore the code is
+In the following the login form is added to [home.html](../dcrm/website/templates/home.html) instead of a separate
+login-template. Therefore the code is
 slightliy different.
-You can find the login form in [home.html](../dcrm/website/templates/home.html)
+The following if-statement in django syntax checks if the user is authenticated (logged in).
 
-### Changes
+```html
+ {% if user.is_authenticated %}
+<h1>Hello User</h1>
 
-Changes in the following files:
+{% else %}
+<h1>Login</h1>
+<form method="POST" action="{% url 'home' %}">
+    {% csrf_token %}
+    <form>
+        <div class="mb-3 mt-3">
+            <input type="text" class="form-control" name="username" placeholder="Username" required>
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+</form>
+{% endif %}
+```
 
-- urls.py
-- views.py
-- base.html
-- home.html
+### Logout
+
+For logout the [navbar template](../dcrm/website/templates/navbar.html) is extended with a logout button. The url points
+to the logout view.
+
+```
+{% if user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+    </li>
+{% endif %}
+```
+

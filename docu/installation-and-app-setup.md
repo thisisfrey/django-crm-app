@@ -26,7 +26,8 @@ pip install mysql-connector-python
 4. Download MySQL
    Download MySQL [here](https://dev.mysql.com/downloads/installer/)
 
-5. Start project dcrm
+5. Starting a New Django Project
+   To create a new Django project with the projectname dcrm run the following command:
 
 ```console
 django-admin startproject dcrm
