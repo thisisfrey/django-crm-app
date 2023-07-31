@@ -65,7 +65,7 @@ The database model is for the table **website_record** is now in the MySQL Workb
 
 ## 4. Django administration
 
-To add the database to the Django app administration, the [admin.py](../dcrm/website/admin.py) needs to
+To add the database to the Django administration, the file [admin.py](../dcrm/website/admin.py) needs to
 register the record from the model like this:
 
 ```python

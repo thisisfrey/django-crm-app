@@ -11,11 +11,10 @@
 3. [Build Out The Basic App](./docu/build-out-the-basic-app.md)
 4. [User Authentication](./docu/user-authentication.md)
 5. [Register Users](docu/register-users.md)
+6. [Database Model](docu/database-model.md)
 
 <hr>
 TODO
-
-6. [Database Model]()
 7. [View Records On Website]()
 8. [Bootstrap Table]()
 9. [Individual Records]()
