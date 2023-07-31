@@ -10,11 +10,11 @@
 2. [MySQL Configuration](./docu/mysql-configuration.md)
 3. [Build Out The Basic App](./docu/build-out-the-basic-app.md)
 4. [User Authentication](./docu/user-authentication.md)
+5. [Register Users](docu/register-users.md)
 
 <hr>
 TODO
 
-5. [Register Users]()
 6. [Database Model]()
 7. [View Records On Website]()
 8. [Bootstrap Table]()

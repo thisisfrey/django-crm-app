@@ -1,15 +1,15 @@
 # User Authentication
 
-### Authenticate as superuser
+## Django administration
 
 Login with the previously created superuser on [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin).
 
-#### Superuser credentials:
+### Superuser credentials:
 
 - Username: admin
 - Password: password
 
-#### Fix for Timezone Error
+### Fix for Timezone Error
 
 ZoneInfoNotFoundError: 'No time zone found with key utc'
 
