@@ -1,5 +1,16 @@
 # Register Users
 
+## Preview
+
+Login Page:
+<img src="./images/login.jpg">
+
+Home Page:
+<img src="./images/home.jpg">
+
+Registration:
+<img src="./images/register.JPG">
+
 ## Add registration url
 
 Add the register-path to [urls.py](../dcrm/website/urls.py):
