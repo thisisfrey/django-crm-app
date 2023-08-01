@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center flex-column">
+    <div class="card w-50 mb-3">
+        <div class="card-header"><strong>
+            {{ record.first_name }}
+            {{ record.last_name }}</strong>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+                <strong>Email: </strong>
+                {{ record.email }}</p>
+            <p class="card-text">
+                <strong>Phone: </strong>{{ record.phone }}
+            </p>
+            <p class="card-text">
+                <strong>Address: </strong>{{ record.address }}</p>
+            <p class="card-text">
+                <strong>City: </strong>{{ record.city }}</p>
+            <p class="card-text">
+                <strong>State: </strong>{{ record.state }}</p>
+            <p class="card-text">
+                <strong>Zipcode: </strong>{{ record.zipcode }}</p>
+            <p class="card-text">
+                <strong>Create At: </strong>{{ record.created_at }}</p>
+            <p class="card-text">
+                <strong>ID: </strong>{{ record.id }}</p>
+        </div>
+        <div class="card-footer text-body-secondary">
+            <a class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+    <div class="align-self-center">
+        <a class="btn btn-secondary" href="{% url 'home' %}">Back</a>
+    </div>
+</div>
+
+
+{% endblock %}
