@@ -12,11 +12,10 @@
 4. [User Authentication](./docu/user-authentication.md)
 5. [Register Users](docu/register-users.md)
 6. [Database Model](docu/database-model.md)
+7. [Record Table](docu/record-table.md)
 
 <hr>
 TODO
-7. [View Records On Website]()
-8. [Bootstrap Table]()
 9. [Individual Records]()
 10. [Bootstrap Card]()
 11. [Delete Record]()

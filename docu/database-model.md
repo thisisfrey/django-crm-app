@@ -31,9 +31,15 @@ class Record(models.Model):
     zipcode = models.CharField(max_length=20)
 
     def __str__(self):
-        return (f"{self.last_name} {self.last_name}")
+        return (f"{self.first_name} {self.last_name}")
 
 ```
+
+### String representation
+
+The `__str__` is a built-in special method that controls the string representation of the object. The string is
+constructed using an *f-string* (formatted string literals), denoted by the f prefix before the opening quote. It
+returns a formatted string representing the object.
 
 ## 2. Migration
 
