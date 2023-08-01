@@ -18,8 +18,8 @@ data stored in a database or other data storage systems. Let's look at each oper
 
 ## Delete record
 
-1. Add the url ` path('delete_record/<int:pk>', views.delete_customer_record, name="delete_record")` to the existing
-   URLs
+1. Add the url `path('delete_record/<int:pk>', views.delete_customer_record, name="delete_record")`
+   to [urls.py](../dcrm/website/urls.py)
 2. To delete the record add the delete_customer_record-view:
 
 ```python
@@ -44,15 +44,15 @@ def delete_customer_record(request, pk):
 
 ## Add record
 
-1. Add url in urls.py
-2. Add view in views.py
-3. Add template
-4. Add "Create Record"-button to home
+1. Add url in [urls.py](../dcrm/website/urls.py)
+2. Add view in [views.py](../dcrm/website/views.py)
+3. Create template [add_record.html](../dcrm/website/templates/add_record.html)
+4. Add "Create record"-button to home
 
 ## Update record
 
-1. Add url in urls.py
-2. Add view in views.py
-3. Add template
-4. Add "Edit"-button to card view
+1. Add url in [urls.py](../dcrm/website/urls.py)
+2. Add view in [views.py](../dcrm/website/views.py)
+3. Create template [update_record.html](../dcrm/website/templates/update_record.html)
+4. Add "Edit record"-button to record card
 
