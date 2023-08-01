@@ -27,8 +27,8 @@
             <p class="card-text">
                 <strong>ID: </strong>{{ record.id }}</p>
         </div>
-        <div class="card-footer text-body-secondary">
-            <a class="btn btn-danger">Delete</a>
+        <div class="card-footer">
+            <a class="btn btn-danger" href="{% url 'delete_record' record.id %}">Delete</a>
         </div>
     </div>
     <div class="align-self-center">
