@@ -3,6 +3,10 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+
+<div class="mb-1 text-end">
+    <a class="btn btn-primary" href="{% url 'add_record' %}">Add Record</a>
+</div>
 <table class="table table-striped table-hover table-bordered">
     <thead>
     <tr>

@@ -42,3 +42,17 @@ def delete_customer_record(request, pk):
 </div>
 ```
 
+## Add record
+
+1. Add url in urls.py
+2. Add view in views.py
+3. Add template
+4. Add "Create Record"-button to home
+
+## Update record
+
+1. Add url in urls.py
+2. Add view in views.py
+3. Add template
+4. Add "Edit"-button to card view
+
