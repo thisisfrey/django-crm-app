@@ -3,10 +3,10 @@
 ## Preview
 
 Login Page:
-<img src="./images/login.jpg">
+<img src="./images/login.JPG">
 
 Home Page:
-<img src="./images/home.jpg">
+<img src="./images/home.JPG">
 
 Registration:
 <img src="./images/register.JPG">
